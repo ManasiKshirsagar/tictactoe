@@ -1,0 +1,122 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(nature4.jpg);
+    background-size: cover;
+}
+nav{
+    /* background-color: rgb(227, 84, 158); */
+    color: rgb(57, 54, 54);
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+    /* padding-left: 200px; */
+}
+
+nav li{
+    list-style-type:none;
+    
+}
+
+.gameContainer{
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+}
+
+.box{
+    font-size: 8vw;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(223, 176, 206);
+}
+
+.info{
+    font-size: 20px;
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imgbox  img{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    background-color: rgb(205, 164, 177);
+    width: 100px;
+    padding: 2px;
+    margin-left:  15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset:hover{
+    border: 3px solid black;
+    background-color: palevioletred;
+    
+}
+.line{
+    background-color: black;
+    width: 0;
+    height: 0px;
+    position: absolute;
+    background-color: rgb(237, 147, 177);
+    border: 2px solid rgb(105, 179, 204);
+    border-radius: 20px;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and(max-width:950px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
